@@ -1,0 +1,138 @@
+/* Inicio do desafio
+@author Kevin Tavares
+ */
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.modalScript {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f1ef;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.219);
+  font-size: 16px;
+}
+
+.hidden-div {
+  opacity: 0;
+}
+
+.modalScript img {
+  height: 110px;
+  margin-right: 20px;
+}
+
+header {
+  background-image: linear-gradient(to right, #4dd2d2, #092331);
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  font-size: 10px;
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blue {
+  background-color: #092331;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f1ef;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.219);
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav {
+  background-color: white;
+  height: 100vh;
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 30px;
+}
+
+.nav img {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.nav ul li {
+  margin-bottom: 70px;
+}
+
+.icon {
+  position: relative;
+}
+.card img {
+  height: 110px;
+  margin-right: 20px;
+}
+
+.bolinha {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #4dd2d2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.card div p:nth-child(1) {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
