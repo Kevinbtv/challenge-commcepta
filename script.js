@@ -1,3 +1,6 @@
+// ----------- Início código JavaScript -----------
+
+// Seleção das sections
 const cards = document.querySelector('.cards')
 const abrirIcon = document.querySelector('.toggle')
 const fecharIcon = document.querySelector('.toggle-x')
@@ -6,6 +9,7 @@ const navMobile = document.querySelector('.navMobile')
 const modal = document.querySelector('.modal')
 const listas = document.querySelectorAll('.listasMob')
 
+// Dados JSON
 const dados = [
   {
     id: 1,
@@ -72,6 +76,13 @@ const dados = [
   }
 ]
 
+// Abrir o Menu ao clicar no ícone
+abrirIcon.addEventListener('click', function () {
+  navMobile.style.display = 'flex'
+  container.style.display = 'none'
+})
+
+// Fechar o Menu ao clicar nas listas
 listas.forEach(listas =>
   listas.addEventListener('click', () => {
     navMobile.style.display = 'none'
@@ -79,6 +90,13 @@ listas.forEach(listas =>
   })
 )
 
+// Fechar o Menu ao clicar no ícone
+fecharIcon.addEventListener('click', function () {
+  navMobile.style.display = 'none'
+  container.style.display = ''
+})
+
+// Cards padrões dinâmicos
 dados.forEach(function (dados, i) {
   const renderDados = function (data) {
     const html = `
@@ -100,6 +118,7 @@ dados.forEach(function (dados, i) {
   renderDados(dados)
 })
 
+// Aparecer card maior ao clicar no menor
 document.querySelectorAll('.card').forEach(function (card, i) {
   card.addEventListener('click', function () {
     modal.classList.remove('hidden-div')
@@ -107,26 +126,13 @@ document.querySelectorAll('.card').forEach(function (card, i) {
     modal.innerHTML = ''
 
     const html = `
-    <div class="modalScript">
         <img src=${dados[i].foto} alt="" />
         <div>
           <p>Nome: <span>${dados[i].nome}</span></p>
           <p>Cargo: <span>${dados[i].cargo}</span></p>
           <p>Idade: <span>${dados[i].idade}</span></p>
         </div>
-      </div>
     `
-
-    modal.insertAdjacentHTML('afterbegin', html)
+    modal.insertAdjacentHTML('beforeend', html)
   })
-})
-
-abrirIcon.addEventListener('click', function () {
-  navMobile.style.display = 'flex'
-  container.style.display = 'none'
-})
-
-fecharIcon.addEventListener('click', function () {
-  navMobile.style.display = 'none'
-  container.style.display = ''
 })
