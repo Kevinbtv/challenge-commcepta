@@ -16,8 +16,8 @@
 
 ## Principais desafios :grimacing:
 
-- Desenvolver os cards dinamicamente, deixando o código HTML mais "enxuto".
-- Aplicar o preenchimento do card ao clicar, não estava conseguindo utilizando JavaScript, encontrei uma forma via CSS.
+- Desenvolver os cards dinamicamente em JavaScirpt, deixando o código HTML mais "enxuto".
+- Aplicar o preenchimento do card ao clicar, não estava conseguindo utilizando JavaScript, encontrei uma forma em CSS.
 - Ao clicar no card menor, apresentar animação suave para melhor experiência.
 - O mais desafiador foi restruturar o código para deixá-lo mais acessível e fácil de ler.
 
