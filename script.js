@@ -1,3 +1,11 @@
+const cards = document.querySelector('.cards')
+const abrirIcon = document.querySelector('.toggle')
+const fecharIcon = document.querySelector('.toggle-x')
+const container = document.querySelector('.principal')
+const navMobile = document.querySelector('.navMobile')
+const modal = document.querySelector('.modal')
+const listas = document.querySelectorAll('.listasMob')
+
 const dados = [
   {
     id: 1,
@@ -24,7 +32,7 @@ const dados = [
     id: 4,
     foto: 'foto-fernanda.png',
     nome: 'Fernanda',
-    cargo: 'Desenvolvedor',
+    cargo: 'Desenvolvedora',
     idade: 23
   },
   {
@@ -38,7 +46,7 @@ const dados = [
     id: 6,
     foto: 'foto-iris.png',
     nome: 'Iris',
-    cargo: 'Desenvolvedor',
+    cargo: 'Desenvolvedora',
     idade: 25
   },
   {
@@ -64,33 +72,61 @@ const dados = [
   }
 ]
 
-document.querySelector('.toggle').addEventListener('click', function () {
-  document.querySelector('.nav').style.display = 'flex'
-  document.querySelector('.principal').style.display = 'none'
-})
+listas.forEach(listas =>
+  listas.addEventListener('click', () => {
+    navMobile.style.display = 'none'
+    container.style.display = ''
+  })
+)
 
-document.querySelector('.toggle-x').addEventListener('click', function () {
-  document.querySelector('.nav').style.display = 'none'
-  document.querySelector('.principal').style.display = ''
+dados.forEach(function (dados, i) {
+  const renderDados = function (data) {
+    const html = `
+            <article tabindex="${i}" class="card">
+              <div class="icon">
+                <img src="${data.foto}" alt="imagem da web" />
+                <div class="bolinha">${i + 1}</div>
+              </div>
+              <div>
+                <p>${data.nome}</p>
+                <p>${data.cargo}</p>
+              </div>
+            </article>
+    `
+
+    cards.insertAdjacentHTML('beforeend', html)
+  }
+
+  renderDados(dados)
 })
 
 document.querySelectorAll('.card').forEach(function (card, i) {
   card.addEventListener('click', function () {
-    document.querySelector('.modal').classList.remove('hidden-div')
+    modal.classList.remove('hidden-div')
 
-    document.querySelector('.modal').innerHTML = ''
+    modal.innerHTML = ''
 
     const html = `
     <div class="modalScript">
         <img src=${dados[i].foto} alt="" />
         <div>
-          <p>Nome: ${dados[i].nome}</p>
-          <p>Cargo: ${dados[i].cargo}</p>
-          <p>Idade: ${dados[i].idade}</p>
+          <p>Nome: <span>${dados[i].nome}</span></p>
+          <p>Cargo: <span>${dados[i].cargo}</span></p>
+          <p>Idade: <span>${dados[i].idade}</span></p>
         </div>
       </div>
     `
 
-    document.querySelector('.modal').insertAdjacentHTML('afterbegin', html)
+    modal.insertAdjacentHTML('afterbegin', html)
   })
+})
+
+abrirIcon.addEventListener('click', function () {
+  navMobile.style.display = 'flex'
+  container.style.display = 'none'
+})
+
+fecharIcon.addEventListener('click', function () {
+  navMobile.style.display = 'none'
+  container.style.display = ''
 })

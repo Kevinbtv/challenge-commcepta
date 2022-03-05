@@ -11,22 +11,39 @@ body {
   margin-right: 20px;
 }
 
-.modalScript {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: #f0f1ef;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.219);
-  font-size: 16px;
-}
-
 .hidden-div {
   opacity: 0;
 }
 
-.modalScript img {
-  height: 110px;
+.list-web {
+  display: none;
+}
+
+.navMobile {
+  background-color: white;
+  height: 100vh;
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 30px;
+}
+
+.navMobile img {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
   margin-right: 20px;
+}
+.navMobile ul li {
+  margin-bottom: 70px;
+}
+
+.navMobile ul li a {
+  color: black;
 }
 
 header {
@@ -41,22 +58,32 @@ header nav {
   align-items: center;
 }
 
-header nav ul {
+.modalScript {
   display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f1ef;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.219);
+  font-size: 16px;
 }
 
-header nav ul li {
-  font-size: 10px;
+.modalScript img {
+  height: 110px;
+  margin-right: 20px;
+}
+
+.modalScript div p {
+  margin-bottom: 10px;
+}
+
+.modalScript div span {
+  font-weight: bold;
 }
 
 .cards {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-}
-
-.blue {
-  background-color: #092331;
 }
 
 .card {
@@ -69,37 +96,30 @@ header nav ul li {
   font-size: 16px;
   cursor: pointer;
   position: relative;
+  transition: background 0.3s;
 }
 
-.nav {
-  background-color: white;
-  height: 100vh;
-  display: none;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-size: 30px;
+.card:hover {
+  background-color: #002b50;
+  color: white;
 }
 
-.nav img {
-  height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 10px;
+.card:focus {
+  background-color: #002b50;
+  color: white;
+}
+
+.card img {
+  height: 110px;
   margin-right: 20px;
 }
-.nav ul li {
-  margin-bottom: 70px;
+
+.card div p:nth-child(1) {
+  font-weight: bold;
 }
 
 .icon {
   position: relative;
-}
-.card img {
-  height: 110px;
-  margin-right: 20px;
 }
 
 .bolinha {
@@ -117,10 +137,6 @@ header nav ul li {
   font-weight: bold;
 }
 
-.card div p:nth-child(1) {
-  font-weight: bold;
-}
-
 @media screen and (min-width: 1440px) {
   .container {
     margin-left: 250px;
@@ -134,5 +150,24 @@ header nav ul li {
 
   .card {
     margin-bottom: 0;
+  }
+
+  .toggle,
+  .toggle-x {
+    display: none;
+  }
+
+  .list-web {
+    display: flex;
+    gap: 40px;
+  }
+
+  .list-web li a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .list-web li a:hover {
+    color: cadetblue;
   }
 }
