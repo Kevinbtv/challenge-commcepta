@@ -14,9 +14,6 @@
 ### Home page
 - [x] Ao clicar em cada card menor, acima aparecerá o card maior informando o nome, cargo e idade.
 
-## O que pode melhorar ? :test_tube:
-- Implementar o site responsivo para versão tablet/laptop (1 (Versão Mobile Max 1024px, versão Web Min 1408px).
-
 ## Principais desafios :grimacing:
 
 - Desenvolver os cards dinamicamente em JavaScript, deixando o código HTML mais "enxuto".
