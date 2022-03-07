@@ -28,6 +28,7 @@
 
 - Antes estava responsivo apenas para mobile/tablet (Max 1023px) e para extra large screen (Min 1440px - 3 cards por linha).
 - Atualizei introduzindo versão responsiva para laptop/desktop/large screen (Min 1024px), onde mostra 2 cards por linha, ao invés de 3.
+- Coloquei os arquivos de imagens dentro de uma única pasta, para uma organização maior.
 
 ## Como utilizar :bangbang:
 
