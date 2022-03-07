@@ -102,7 +102,7 @@ dados.forEach(function (dados, i) {
     const html = `
             <article tabindex="${i}" class="card">
               <div class="icon">
-                <img src="${data.foto}" alt="imagem da web" />
+                <img src="./files/${data.foto}" alt="imagem da web" />
                 <div class="bolinha">${i + 1}</div>
               </div>
               <div>
@@ -126,7 +126,7 @@ document.querySelectorAll('.card').forEach(function (card, i) {
     modal.innerHTML = ''
 
     const html = `
-        <img src=${dados[i].foto} alt="" />
+        <img src="./files/${dados[i].foto}" alt="" />
         <div>
           <p>Nome: <span>${dados[i].nome}</span></p>
           <p>Cargo: <span>${dados[i].cargo}</span></p>
