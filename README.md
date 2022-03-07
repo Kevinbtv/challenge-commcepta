@@ -14,9 +14,6 @@
 ### Home page
 - [x] Ao clicar em cada card menor, acima aparecerá o card maior informando o nome, cargo e idade.
 
-## O que pode melhorar ? :test_tube:
-- Implementar o site responsivo para versão tablet/laptop (1 (Versão Mobile Max 1024px, versão Web Min 1408px).
-
 ## Principais desafios :grimacing:
 
 - Desenvolver os cards dinamicamente em JavaScript, deixando o código HTML mais "enxuto".
@@ -28,6 +25,7 @@
 
 - Antes estava responsivo apenas para mobile/tablet (Max 1023px) e para extra large screen (Min 1440px - 3 cards por linha).
 - Atualizei introduzindo versão responsiva para laptop/desktop/large screen (Min 1024px), onde mostra 2 cards por linha, ao invés de 3.
+- Coloquei os arquivos de imagens dentro de uma única pasta, para uma organização maior.
 
 ## Como utilizar :bangbang:
 
