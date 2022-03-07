@@ -149,7 +149,7 @@ header nav {
 
 /* Versão Web */
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .container {
     margin-left: 250px;
     margin-right: 250px;
