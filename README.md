@@ -30,4 +30,4 @@
 ## Como utilizar :bangbang:
 
 Acesse ao site
-- <a href="https://challenge-commcepta.netlify.app/" target="_blank">Challenge Commcepta</a>
+- <a href="https://challenge-commcepta.netlify.app/" target="_blank">Space Box</a>
